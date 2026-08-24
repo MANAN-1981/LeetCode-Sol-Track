@@ -1,0 +1,14 @@
+// Last updated: 8/24/2026, 9:42:47 PM
+func maxProfit(prices []int) int {
+    mp := 0
+    minPrice := 2147483647
+   
+    for _ ,p := range prices{
+        if p < minPrice{
+            minPrice = p
+        }else if ( p - minPrice ) > mp {
+            mp = p - minPrice
+        }
+    }
+    return mp
+}
