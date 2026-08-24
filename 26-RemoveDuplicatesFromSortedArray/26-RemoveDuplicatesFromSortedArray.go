@@ -1,0 +1,15 @@
+// Last updated: 8/24/2026, 9:43:32 PM
+func removeDuplicates(nums []int) int {
+    var k int = 0
+
+    for i:=1; i<len(nums);i++{
+        
+        if nums[k] != nums[i]{
+
+                k++
+                nums[k] = nums[i]
+        }
+        }
+    
+    return k +1
+}
