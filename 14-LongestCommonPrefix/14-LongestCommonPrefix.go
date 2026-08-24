@@ -1,0 +1,17 @@
+// Last updated: 8/24/2026, 9:43:35 PM
+func longestCommonPrefix(strs []string) string {
+    
+    Newstring := ""
+
+    for j:=0; j<len(strs[0]);j++{
+        ch := strs[0][j]
+
+        for i:=1; i<len(strs); i++{
+            if j>=len(strs[i]) || strs[i][j] != ch{
+                return Newstring
+            }
+        }
+       Newstring += string(ch)
+    }
+    return Newstring
+}
