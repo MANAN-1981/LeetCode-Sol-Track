@@ -1,0 +1,13 @@
+// Last updated: 9/1/2026, 11:14:11 AM
+class Solution {
+    public int scoreOfString(String s) {
+        
+         int out = 0;
+
+        for (int i = 1; i < s.length(); i++) {
+            out += Math.abs(s.charAt(i) - s.charAt(i - 1));
+        }
+
+        return out;
+    }
+}
